@@ -1,0 +1,2887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.5 on win32)" generated="2026-02-20T23:14:56.284101" rpa="false" schemaversion="5">
+<suite id="s1" name="Workshop" source="C:\Year_2\Term_2\QA\Robot_assignment\workshop.robot">
+<test id="s1-t1" name="Verify registration form with all input field" line="8">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:14:56.486663" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:14:56.486663" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:14:56.486663" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:14:56.486663" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:14:56.486663" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:14:56.486663" elapsed="1.208598"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:14:57.695261" elapsed="0.027012"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:14:56.486663" elapsed="1.235610"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:14:56.486663" elapsed="1.235610"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:02.722354" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:14:57.722273" elapsed="5.000081"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:02.722354" elapsed="5.305358"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:08.027712" elapsed="5.294143"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:14:56.485664" elapsed="16.836191"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:15:13.323868" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:15:13.323868" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:13.324869" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:13.323868" elapsed="0.001001"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:13.325867" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:15:13.324869" elapsed="1.231930"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:15:14.556799" elapsed="0.023999"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:13.324869" elapsed="1.255929"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:13.323868" elapsed="1.256930"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:19.581429" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:15:14.580798" elapsed="5.000631"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:19.581429" elapsed="0.314610"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:19.896039" elapsed="0.278318"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:13.322874" elapsed="6.852487"/>
+</kw>
+<kw name="Input Firstname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.175361" level="INFO">Typing text 'Chonburi' into text field '//*[@id='input_comp-lt33fcq41']'.</msg>
+<arg>//*[@id='input_comp-lt33fcq41']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.175361" elapsed="0.088524"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2026-02-20T23:15:20.175361" elapsed="0.088524"/>
+</kw>
+<kw name="Input Lastname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.264877" level="INFO">Typing text 'Boy' into text field '//*[@id='input_comp-lt33fcs1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcs1']</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.264877" elapsed="0.065894"/>
+</kw>
+<arg>${LNAME}</arg>
+<status status="PASS" start="2026-02-20T23:15:20.264877" elapsed="0.065894"/>
+</kw>
+<kw name="Input Email" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.331782" level="INFO">Typing text 'Chon.boy@mail.scb' into text field '//*[@id='input_comp-lt33fcsf1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsf1']</arg>
+<arg>${mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.331782" elapsed="0.056194"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2026-02-20T23:15:20.331782" elapsed="0.057317"/>
+</kw>
+<kw name="Input Telephone" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.389099" level="INFO">Typing text '099-999-9999' into text field '//*[@id='input_comp-lt33fcsi1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsi1']</arg>
+<arg>${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.389099" elapsed="0.051403"/>
+</kw>
+<arg>${TEL}</arg>
+<status status="PASS" start="2026-02-20T23:15:20.389099" elapsed="0.051403"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.441500" level="INFO">Typing text 'test this is our note' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.440502" elapsed="0.098212"/>
+</kw>
+<arg>test this is our note</arg>
+<status status="PASS" start="2026-02-20T23:15:20.440502" elapsed="0.098212"/>
+</kw>
+<kw name="Input Amount People" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.539725" elapsed="0.286676"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.827396" level="INFO">Clicking element '//*[@id='collection_comp-lt33fcsl1']'.</msg>
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.826401" elapsed="0.040991"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='comp-lt33fcsl1-portal-wrapper-id']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.867392" elapsed="0.025487"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-20T23:15:20.893879" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>int(${amount}) - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.893879" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${index} &gt; 5">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${index}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:20.893879" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:20.893879" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:20.893879" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.893879" level="INFO">Clicking element '//*[@id='menuitem-2']'.</msg>
+<arg>//*[@id='menuitem-${index}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.893879" elapsed="0.041188"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2026-02-20T23:15:20.539725" elapsed="0.395342"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.936065" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.936065" elapsed="0.038760"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:20.936065" elapsed="0.039764"/>
+</kw>
+<kw name="Click I accepted term" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:20.975829" level="INFO">Clicking element '//*[@class='cCdhN7']'.</msg>
+<arg>//*[@class='cCdhN7']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:20.975829" elapsed="0.052938"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.028767" elapsed="0.277500"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:20.975829" elapsed="0.330438"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:21.306891" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.306891" elapsed="0.045570"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:21.306891" elapsed="0.045570"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:21.353462" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.353462" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:21.362461" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.354462" elapsed="0.007999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.362461" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:21.353462" elapsed="0.008999"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:21.353462" elapsed="0.008999"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:21.363462" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.363462" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:21.372598" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.363462" elapsed="0.009136"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.372598" elapsed="0.001001"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:21.363462" elapsed="0.010137"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:21.363462" elapsed="0.010137"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:21.373599" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.373599" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:21.386565" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.373599" elapsed="0.014074"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.387673" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:21.373599" elapsed="0.014074"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:21.373599" elapsed="0.014074"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:21.388680" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.388680" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:21.395678" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.388680" elapsed="0.007999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.396679" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:21.388680" elapsed="0.007999"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:21.388680" elapsed="0.007999"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:21.397677" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.396679" elapsed="0.000998"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:21.407863" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.397677" elapsed="0.010186"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.407863" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:21.397677" elapsed="0.010186"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:21.396679" elapsed="0.011184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:22.409199" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:15:21.408853" elapsed="1.000346"/>
+</kw>
+<kw name="Check Accept Terms is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:22.410357" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:22.410357" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:22.428706" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:22.410357" elapsed="0.018349"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:22.428706" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ACCEPT_TERMS}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:22.410357" elapsed="0.018349"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:22.409199" elapsed="0.019507"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:15:22.428706" elapsed="2.110766"/>
+</kw>
+<tag>Happy Case</tag>
+<status status="PASS" start="2026-02-20T23:14:56.485664" elapsed="28.053808"/>
+</test>
+<test id="s1-t2" name="Required Firstname to submit" line="35">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:15:24.543686" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:15:24.543686" elapsed="0.001007"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:24.544693" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:24.544693" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:24.545691" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:15:24.544693" elapsed="1.793033"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:15:26.338728" elapsed="0.037148"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:24.544693" elapsed="1.831183"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:24.544693" elapsed="1.831183"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:31.376219" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:15:26.375876" elapsed="5.000343"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:31.376219" elapsed="0.285554"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:31.662787" elapsed="0.280144"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:24.543686" elapsed="7.399245"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:15:31.943932" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:15:31.943932" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:31.943932" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:31.943932" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:31.943932" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:15:31.943932" elapsed="1.405949"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:15:33.349881" elapsed="0.027002"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:31.943932" elapsed="1.432951"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:31.943932" elapsed="1.433960"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:38.378388" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:15:33.377892" elapsed="5.000496"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:38.378388" elapsed="0.276389"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:38.654777" elapsed="0.277590"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:31.942931" elapsed="6.989436"/>
+</kw>
+<kw name="Input Lastname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:38.933373" level="INFO">Typing text 'Boy' into text field '//*[@id='input_comp-lt33fcs1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcs1']</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:38.933373" elapsed="0.111904"/>
+</kw>
+<arg>${LNAME}</arg>
+<status status="PASS" start="2026-02-20T23:15:38.932367" elapsed="0.112910"/>
+</kw>
+<kw name="Input Email" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.045277" level="INFO">Typing text 'Chon.boy@mail.scb' into text field '//*[@id='input_comp-lt33fcsf1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsf1']</arg>
+<arg>${mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.045277" elapsed="0.079804"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2026-02-20T23:15:39.045277" elapsed="0.080803"/>
+</kw>
+<kw name="Input Telephone" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.126080" level="INFO">Typing text '099-999-9999' into text field '//*[@id='input_comp-lt33fcsi1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsi1']</arg>
+<arg>${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.126080" elapsed="0.091811"/>
+</kw>
+<arg>${TEL}</arg>
+<status status="PASS" start="2026-02-20T23:15:39.126080" elapsed="0.091811"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.219294" level="INFO">Typing text 'None' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.219294" elapsed="0.076571"/>
+</kw>
+<arg>${NONE}</arg>
+<status status="PASS" start="2026-02-20T23:15:39.217891" elapsed="0.077974"/>
+</kw>
+<kw name="Input Amount People" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.296864" elapsed="0.270887"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.568819" level="INFO">Clicking element '//*[@id='collection_comp-lt33fcsl1']'.</msg>
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.568819" elapsed="0.057765"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='comp-lt33fcsl1-portal-wrapper-id']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.626584" elapsed="0.030162"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-20T23:15:39.657746" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>int(${amount}) - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.656746" elapsed="0.001000"/>
+</kw>
+<if>
+<branch type="IF" condition="${index} &gt; 5">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${index}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:39.657746" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:39.657746" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:39.657746" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.657746" level="INFO">Clicking element '//*[@id='menuitem-2']'.</msg>
+<arg>//*[@id='menuitem-${index}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.657746" elapsed="0.062562"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2026-02-20T23:15:39.296864" elapsed="0.423444"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.721308" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.721308" elapsed="0.044890"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:39.720308" elapsed="0.045890"/>
+</kw>
+<kw name="Click I accepted term" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:39.767652" level="INFO">Clicking element '//*[@class='cCdhN7']'.</msg>
+<arg>//*[@class='cCdhN7']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.767652" elapsed="0.065201"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:39.833852" elapsed="0.276907"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:39.766198" elapsed="0.344561"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:40.111763" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.110759" elapsed="0.045762"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:40.110759" elapsed="0.045762"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:40.157520" level="INFO">${state} = true</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.157520" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:40.173988" level="INFO">${result} = true</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.158521" elapsed="0.015467"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.173988" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:40.157520" elapsed="0.016468"/>
+</kw>
+<arg>'invalid'</arg>
+<status status="PASS" start="2026-02-20T23:15:40.157520" elapsed="0.017468"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:40.174988" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.174988" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:40.187975" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.174988" elapsed="0.012987"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.187975" elapsed="0.000999"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:40.174988" elapsed="0.013986"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:40.174988" elapsed="0.013986"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:40.189973" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.188974" elapsed="0.000999"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:40.198379" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.189973" elapsed="0.008406"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.198379" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:40.189973" elapsed="0.008406"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:40.188974" elapsed="0.009405"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:40.199383" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.198379" elapsed="0.001004"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:40.208966" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.199383" elapsed="0.009583"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.208966" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:40.199383" elapsed="0.009583"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:40.198379" elapsed="0.010587"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:40.209970" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.209970" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:40.220452" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.209970" elapsed="0.011482"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.221452" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:40.209970" elapsed="0.011482"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:40.208966" elapsed="0.012486"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:15:40.221452" elapsed="2.121003"/>
+</kw>
+<tag>Bad Case</tag>
+<status status="PASS" start="2026-02-20T23:15:24.541683" elapsed="17.802334"/>
+</test>
+<test id="s1-t3" name="Required Lastname to submit" line="56">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:15:42.348092" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:15:42.348092" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:42.348092" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:42.348092" elapsed="0.000997"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:42.349089" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:15:42.349089" elapsed="1.330981"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:15:43.680070" elapsed="0.032591"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:42.349089" elapsed="1.363572"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:42.348092" elapsed="1.365571"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:48.713990" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:15:43.713663" elapsed="5.000327"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:48.713990" elapsed="0.272937"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:48.986927" elapsed="0.278906"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:42.346074" elapsed="6.919759"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:15:49.266838" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:15:49.266838" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:49.266838" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:49.266838" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:49.266838" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:15:49.266838" elapsed="1.399130"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:15:50.665968" elapsed="0.030009"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:49.266838" elapsed="1.429139"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:49.266838" elapsed="1.429139"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:15:55.696186" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:15:50.695977" elapsed="5.000209"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:55.696186" elapsed="0.266037"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:55.962223" elapsed="0.265952"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:49.266838" elapsed="6.961337"/>
+</kw>
+<kw name="Input Firstname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.228175" level="INFO">Typing text 'Chonburi' into text field '//*[@id='input_comp-lt33fcq41']'.</msg>
+<arg>//*[@id='input_comp-lt33fcq41']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.228175" elapsed="0.107102"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2026-02-20T23:15:56.228175" elapsed="0.107102"/>
+</kw>
+<kw name="Input Email" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.335277" level="INFO">Typing text 'Chon.boy@mail.scb' into text field '//*[@id='input_comp-lt33fcsf1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsf1']</arg>
+<arg>${mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.335277" elapsed="0.096693"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2026-02-20T23:15:56.335277" elapsed="0.096693"/>
+</kw>
+<kw name="Input Telephone" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.434978" level="INFO">Typing text '099-999-9999' into text field '//*[@id='input_comp-lt33fcsi1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsi1']</arg>
+<arg>${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.432977" elapsed="0.079366"/>
+</kw>
+<arg>${TEL}</arg>
+<status status="PASS" start="2026-02-20T23:15:56.432977" elapsed="0.079366"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.512343" level="INFO">Typing text 'None' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.512343" elapsed="0.062713"/>
+</kw>
+<arg>${NONE}</arg>
+<status status="PASS" start="2026-02-20T23:15:56.512343" elapsed="0.062713"/>
+</kw>
+<kw name="Input Amount People" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.576057" elapsed="0.272148"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.848205" level="INFO">Clicking element '//*[@id='collection_comp-lt33fcsl1']'.</msg>
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.848205" elapsed="0.044914"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='comp-lt33fcsl1-portal-wrapper-id']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.893119" elapsed="0.019396"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-20T23:15:56.912515" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>int(${amount}) - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.912515" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${index} &gt; 5">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${index}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:56.912515" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:56.912515" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:56.912515" elapsed="0.001008"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.913523" level="INFO">Clicking element '//*[@id='menuitem-2']'.</msg>
+<arg>//*[@id='menuitem-${index}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.913523" elapsed="0.053542"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2026-02-20T23:15:56.575056" elapsed="0.392009"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:56.968095" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:56.968095" elapsed="0.068018"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:56.967065" elapsed="0.069048"/>
+</kw>
+<kw name="Click I accepted term" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.036113" level="INFO">Clicking element '//*[@class='cCdhN7']'.</msg>
+<arg>//*[@class='cCdhN7']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.036113" elapsed="0.047500"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.083613" elapsed="0.277672"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:57.036113" elapsed="0.325172"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.362379" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.362379" elapsed="0.050125"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:57.362379" elapsed="0.050125"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:57.413511" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.413511" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.430742" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.413511" elapsed="0.017231"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.430742" elapsed="0.001258"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:57.413511" elapsed="0.018489"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:57.413511" elapsed="0.018489"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:57.432000" level="INFO">${state} = true</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.432000" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.444583" level="INFO">${result} = true</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.433006" elapsed="0.011577"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.444583" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:57.433006" elapsed="0.011577"/>
+</kw>
+<arg>'invalid'</arg>
+<status status="PASS" start="2026-02-20T23:15:57.432000" elapsed="0.013595"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:57.445595" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.445595" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.455010" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.446591" elapsed="0.008419"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.455010" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:57.445595" elapsed="0.010416"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:57.445595" elapsed="0.010416"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:57.456011" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.456011" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.465010" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.456011" elapsed="0.008999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.465010" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:57.456011" elapsed="0.008999"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:57.456011" elapsed="0.008999"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:15:57.466012" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.466012" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:57.479011" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.466012" elapsed="0.012999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.479011" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:15:57.466012" elapsed="0.012999"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:15:57.465010" elapsed="0.014001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:15:57.479011" elapsed="2.118378"/>
+</kw>
+<tag>Bad Case</tag>
+<status status="PASS" start="2026-02-20T23:15:42.345035" elapsed="17.253472"/>
+</test>
+<test id="s1-t4" name="Required Telephone to submit" line="76">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:15:59.600312" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:15:59.599343" elapsed="0.000969"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:15:59.600312" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:15:59.600312" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:15:59.600312" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:15:59.600312" elapsed="1.201716"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:00.802028" elapsed="0.028508"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:59.600312" elapsed="1.230224"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:15:59.600312" elapsed="1.230224"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:05.831846" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:00.830536" elapsed="5.001310"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:05.831846" elapsed="0.302859"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:06.134705" elapsed="0.279309"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:15:59.599343" elapsed="6.814671"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:06.415011" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:06.414014" elapsed="0.000997"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:06.415011" elapsed="0.000991"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:06.415011" elapsed="0.000991"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:06.417008" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:06.417008" elapsed="1.197334"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:07.614342" elapsed="0.029864"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:06.417008" elapsed="1.227198"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:06.415011" elapsed="1.229195"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:12.645719" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:07.644206" elapsed="5.001513"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:12.645719" elapsed="0.290715"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:12.936434" elapsed="0.275439"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:06.414014" elapsed="6.799081"/>
+</kw>
+<kw name="Input Firstname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.213095" level="INFO">Typing text 'Chonburi' into text field '//*[@id='input_comp-lt33fcq41']'.</msg>
+<arg>//*[@id='input_comp-lt33fcq41']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.213095" elapsed="0.076974"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2026-02-20T23:16:13.213095" elapsed="0.076974"/>
+</kw>
+<kw name="Input Lastname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.290069" level="INFO">Typing text 'Boy' into text field '//*[@id='input_comp-lt33fcs1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcs1']</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.290069" elapsed="0.060577"/>
+</kw>
+<arg>${LNAME}</arg>
+<status status="PASS" start="2026-02-20T23:16:13.290069" elapsed="0.060577"/>
+</kw>
+<kw name="Input Email" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.351646" level="INFO">Typing text 'Chon.boy@mail.scb' into text field '//*[@id='input_comp-lt33fcsf1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsf1']</arg>
+<arg>${mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.351646" elapsed="0.092621"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2026-02-20T23:16:13.350646" elapsed="0.093621"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.444267" level="INFO">Typing text 'None' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.444267" elapsed="0.072698"/>
+</kw>
+<arg>${NONE}</arg>
+<status status="PASS" start="2026-02-20T23:16:13.444267" elapsed="0.072698"/>
+</kw>
+<kw name="Input Amount People" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.517968" elapsed="0.271668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.789636" level="INFO">Clicking element '//*[@id='collection_comp-lt33fcsl1']'.</msg>
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.789636" elapsed="0.051848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='comp-lt33fcsl1-portal-wrapper-id']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.841484" elapsed="0.036293"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-20T23:16:13.878790" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>int(${amount}) - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.878790" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${index} &gt; 5">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${index}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:13.878790" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:13.878790" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:13.878790" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.878790" level="INFO">Clicking element '//*[@id='menuitem-2']'.</msg>
+<arg>//*[@id='menuitem-${index}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.878790" elapsed="0.044636"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2026-02-20T23:16:13.516965" elapsed="0.406461"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.923426" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.923426" elapsed="0.043936"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:13.923426" elapsed="0.043936"/>
+</kw>
+<kw name="Click I accepted term" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:13.968363" level="INFO">Clicking element '//*[@class='cCdhN7']'.</msg>
+<arg>//*[@class='cCdhN7']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:13.967362" elapsed="0.055841"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.023203" elapsed="0.278978"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:13.967362" elapsed="0.334819"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:14.302181" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.302181" elapsed="0.052834"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:14.302181" elapsed="0.052834"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:14.356015" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.356015" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:14.374029" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.356015" elapsed="0.018014"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.374029" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:14.356015" elapsed="0.019013"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:14.356015" elapsed="0.019013"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:14.375028" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.375028" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:14.385028" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.375028" elapsed="0.010000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.385028" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:14.375028" elapsed="0.010000"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:14.375028" elapsed="0.010000"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:14.386028" level="INFO">${state} = true</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.386028" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:14.400106" level="INFO">${result} = true</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.386028" elapsed="0.014078"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.400106" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:14.386028" elapsed="0.014078"/>
+</kw>
+<arg>'invalid'</arg>
+<status status="PASS" start="2026-02-20T23:16:14.386028" elapsed="0.014078"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:14.401109" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.401109" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:14.410109" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.401109" elapsed="0.009000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.410109" elapsed="0.001001"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:14.401109" elapsed="0.010001"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:14.400106" elapsed="0.011004"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:14.412110" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.411110" elapsed="0.001000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:14.427798" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.412110" elapsed="0.015688"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.427798" elapsed="0.000999"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:14.412110" elapsed="0.016687"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:14.411110" elapsed="0.017687"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:16:14.428797" elapsed="2.114430"/>
+</kw>
+<tag>Bad Case</tag>
+<status status="PASS" start="2026-02-20T23:15:59.599343" elapsed="16.943884"/>
+</test>
+<test id="s1-t5" name="Required Email to submit" line="96">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:16.544433" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:16.544433" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:16.544433" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:16.544433" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:16.545437" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:16.544433" elapsed="1.158545"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:17.702978" elapsed="0.021000"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:16.544433" elapsed="1.179545"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:16.544433" elapsed="1.179545"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:22.725636" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:17.723978" elapsed="5.001658"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:22.725636" elapsed="0.281002"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:23.006638" elapsed="0.278826"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:16.544433" elapsed="6.741031"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:23.286464" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:23.286464" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:23.287466" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:23.287466" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:23.288472" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:23.287466" elapsed="1.954062"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:25.241528" elapsed="0.053553"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:23.287466" elapsed="2.007615"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:23.287466" elapsed="2.007615"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:30.296284" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:25.295081" elapsed="5.001203"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:30.296284" elapsed="0.288850"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:30.585134" elapsed="0.264144"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:23.286464" elapsed="7.562814"/>
+</kw>
+<kw name="Input Firstname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:30.849278" level="INFO">Typing text 'Chonburi' into text field '//*[@id='input_comp-lt33fcq41']'.</msg>
+<arg>//*[@id='input_comp-lt33fcq41']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:30.849278" elapsed="0.101645"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2026-02-20T23:16:30.849278" elapsed="0.101645"/>
+</kw>
+<kw name="Input Lastname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:30.951923" level="INFO">Typing text 'Boy' into text field '//*[@id='input_comp-lt33fcs1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcs1']</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:30.950923" elapsed="0.070825"/>
+</kw>
+<arg>${LNAME}</arg>
+<status status="PASS" start="2026-02-20T23:16:30.950923" elapsed="0.070825"/>
+</kw>
+<kw name="Input Telephone" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.023013" level="INFO">Typing text '099-999-9999' into text field '//*[@id='input_comp-lt33fcsi1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsi1']</arg>
+<arg>${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.023013" elapsed="0.062777"/>
+</kw>
+<arg>${TEL}</arg>
+<status status="PASS" start="2026-02-20T23:16:31.023013" elapsed="0.063778"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.086791" level="INFO">Typing text 'None' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.086791" elapsed="0.053624"/>
+</kw>
+<arg>${NONE}</arg>
+<status status="PASS" start="2026-02-20T23:16:31.086791" elapsed="0.053624"/>
+</kw>
+<kw name="Input Amount People" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.140415" elapsed="0.283926"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.425345" level="INFO">Clicking element '//*[@id='collection_comp-lt33fcsl1']'.</msg>
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.424341" elapsed="0.064043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='comp-lt33fcsl1-portal-wrapper-id']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.488384" elapsed="0.020517"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-20T23:16:31.509904" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>int(${amount}) - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.509904" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${index} &gt; 5">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${index}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:31.510901" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:31.510901" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:31.509904" elapsed="0.000997"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.510901" level="INFO">Clicking element '//*[@id='menuitem-2']'.</msg>
+<arg>//*[@id='menuitem-${index}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.510901" elapsed="0.073885"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2026-02-20T23:16:31.140415" elapsed="0.445379"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.586794" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.585794" elapsed="0.046695"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:31.585794" elapsed="0.046695"/>
+</kw>
+<kw name="Click I accepted term" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.633693" level="INFO">Clicking element '//*[@class='cCdhN7']'.</msg>
+<arg>//*[@class='cCdhN7']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.633693" elapsed="0.039932"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.673625" elapsed="0.263365"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:31.632489" elapsed="0.304501"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:31.937988" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.937988" elapsed="0.057422"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:31.937988" elapsed="0.057422"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:31.995410" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.995410" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:32.010532" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:31.996881" elapsed="0.013651"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.010532" elapsed="0.001005"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:31.996881" elapsed="0.014656"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:31.995410" elapsed="0.016127"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:32.012536" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.012536" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:32.022537" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.013536" elapsed="0.009001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.022537" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:32.012536" elapsed="0.010001"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:32.011537" elapsed="0.011000"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:32.023900" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.023900" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:32.033022" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.023900" elapsed="0.010121"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.034021" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:32.023900" elapsed="0.010121"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:32.023900" elapsed="0.010121"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:32.035021" level="INFO">${state} = true</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.035021" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:32.048019" level="INFO">${result} = true</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.036021" elapsed="0.011998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.049020" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:32.035021" elapsed="0.013999"/>
+</kw>
+<arg>'invalid'</arg>
+<status status="PASS" start="2026-02-20T23:16:32.035021" elapsed="0.013999"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:32.050019" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.050019" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:32.062283" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.050019" elapsed="0.012264"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.062283" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:32.050019" elapsed="0.012264"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:32.050019" elapsed="0.012264"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:16:32.063282" elapsed="2.203105"/>
+</kw>
+<tag>Bad Case</tag>
+<status status="PASS" start="2026-02-20T23:16:16.543227" elapsed="17.723160"/>
+</test>
+<test id="s1-t6" name="Required Filled Number of Adults to submit" line="116">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:34.267849" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:34.266387" elapsed="0.001462"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:34.267849" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:34.267849" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:34.267849" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:34.267849" elapsed="1.530044"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:35.797893" elapsed="0.042570"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:34.267849" elapsed="1.572614"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:34.267849" elapsed="1.572614"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:40.841749" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:35.840463" elapsed="5.001286"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:40.841749" elapsed="0.287827"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:41.129576" elapsed="0.280148"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:34.266387" elapsed="7.143337"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:41.410730" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:41.410730" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:41.410730" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:41.410730" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:41.411732" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:41.410730" elapsed="1.356029"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:42.766759" elapsed="0.030555"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:41.410730" elapsed="1.386584"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:41.410730" elapsed="1.386584"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:47.797544" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:42.797314" elapsed="5.000230"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:47.797544" elapsed="0.279781"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.077325" elapsed="0.279241"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:41.409724" elapsed="6.946842"/>
+</kw>
+<kw name="Input Firstname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.357572" level="INFO">Typing text 'Chonburi' into text field '//*[@id='input_comp-lt33fcq41']'.</msg>
+<arg>//*[@id='input_comp-lt33fcq41']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.357572" elapsed="0.110139"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2026-02-20T23:16:48.357572" elapsed="0.110139"/>
+</kw>
+<kw name="Input Lastname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.468712" level="INFO">Typing text 'Boy' into text field '//*[@id='input_comp-lt33fcs1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcs1']</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.468712" elapsed="0.065050"/>
+</kw>
+<arg>${LNAME}</arg>
+<status status="PASS" start="2026-02-20T23:16:48.467711" elapsed="0.066051"/>
+</kw>
+<kw name="Input Email" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.533762" level="INFO">Typing text 'Chon.boy@mail.scb' into text field '//*[@id='input_comp-lt33fcsf1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsf1']</arg>
+<arg>${mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.533762" elapsed="0.077285"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2026-02-20T23:16:48.533762" elapsed="0.077285"/>
+</kw>
+<kw name="Input Telephone" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.612051" level="INFO">Typing text '099-999-9999' into text field '//*[@id='input_comp-lt33fcsi1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsi1']</arg>
+<arg>${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.611047" elapsed="0.062513"/>
+</kw>
+<arg>${TEL}</arg>
+<status status="PASS" start="2026-02-20T23:16:48.611047" elapsed="0.062513"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.673560" level="INFO">Typing text 'None' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.673560" elapsed="0.062448"/>
+</kw>
+<arg>${NONE}</arg>
+<status status="PASS" start="2026-02-20T23:16:48.673560" elapsed="0.062448"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.736008" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.736008" elapsed="0.063633"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:48.736008" elapsed="0.063633"/>
+</kw>
+<kw name="Click I accepted term" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:48.800642" level="INFO">Clicking element '//*[@class='cCdhN7']'.</msg>
+<arg>//*[@class='cCdhN7']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.800642" elapsed="0.051240"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:48.852884" elapsed="0.279433"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:48.799641" elapsed="0.332676"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:49.133732" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.133732" elapsed="0.055227"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:49.133732" elapsed="0.055227"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:49.188959" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.188959" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:49.218095" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.190164" elapsed="0.027931"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.218095" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:49.188959" elapsed="0.029136"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:49.188959" elapsed="0.029136"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:49.219100" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.219100" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:49.226098" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.219100" elapsed="0.006998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.226098" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:49.219100" elapsed="0.006998"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:49.218095" elapsed="0.008003"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:49.227101" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.227101" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:49.235462" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.227101" elapsed="0.008361"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.235462" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:49.227101" elapsed="0.008361"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:49.226098" elapsed="0.009364"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:49.236948" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.236948" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:49.245039" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.236948" elapsed="0.008091"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.246038" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:49.236948" elapsed="0.009090"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:16:49.236948" elapsed="0.009090"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:16:49.247041" level="INFO">${state} = true</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.246038" elapsed="0.001003"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:49.282392" level="INFO">${result} = true</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.247041" elapsed="0.035351"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.282392" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:16:49.247041" elapsed="0.035351"/>
+</kw>
+<arg>'invalid'</arg>
+<status status="PASS" start="2026-02-20T23:16:49.246038" elapsed="0.036354"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:16:49.283393" elapsed="2.111444"/>
+</kw>
+<tag>Bad Case</tag>
+<status status="PASS" start="2026-02-20T23:16:34.266387" elapsed="17.128450"/>
+</test>
+<test id="s1-t7" name="Required Pressed Accepted Terms to submit" line="135">
+<kw name="Open Browser CU Hotel" owner="keyword" type="SETUP">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:51.396838" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:51.396838" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:51.396838" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:51.396838" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:51.397838" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:51.397838" elapsed="1.257581"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:52.656437" elapsed="0.037981"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:51.396838" elapsed="1.297580"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:51.396838" elapsed="1.297580"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:16:57.695628" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:52.694418" elapsed="5.001210"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:57.695628" elapsed="0.282600"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:16:57.978228" elapsed="0.280596"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:51.396838" elapsed="6.861986"/>
+</kw>
+<kw name="Open Browser CU Hotel" owner="keyword">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-02-20T23:16:58.259832" level="INFO">${is_ci} = False</msg>
+<var>${is_ci}</var>
+<arg>CI</arg>
+<arg>default=False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-02-20T23:16:58.259832" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_ci}' == 'true'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox"); add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-02-20T23:16:58.260832" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:16:58.260832" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:16:58.260832" level="INFO">Opening browser 'chrome' to base url 'https://panaryco.wixsite.com/myhotel?utm_source=chatgpt.com'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T23:16:58.260832" elapsed="1.363475"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T23:16:59.624307" elapsed="0.035020"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:58.260832" elapsed="1.398495"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:16:58.259832" elapsed="1.400496"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:17:04.660854" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:16:59.660328" elapsed="5.000526"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='LWbAav Kv1aVt']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:17:04.661376" elapsed="0.279230"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@class='JVi7i2 comp-lt33fcq1 wixui-form']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:17:04.940606" elapsed="0.277272"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:16:58.259832" elapsed="6.958046"/>
+</kw>
+<kw name="Input Firstname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.218877" level="INFO">Typing text 'Chonburi' into text field '//*[@id='input_comp-lt33fcq41']'.</msg>
+<arg>//*[@id='input_comp-lt33fcq41']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.217878" elapsed="0.066960"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2026-02-20T23:17:05.217878" elapsed="0.066960"/>
+</kw>
+<kw name="Input Lastname" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.286156" level="INFO">Typing text 'Boy' into text field '//*[@id='input_comp-lt33fcs1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcs1']</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.284838" elapsed="0.053444"/>
+</kw>
+<arg>${LNAME}</arg>
+<status status="PASS" start="2026-02-20T23:17:05.284838" elapsed="0.053444"/>
+</kw>
+<kw name="Input Email" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.339786" level="INFO">Typing text 'Chon.boy@mail.scb' into text field '//*[@id='input_comp-lt33fcsf1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsf1']</arg>
+<arg>${mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.338282" elapsed="0.065383"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2026-02-20T23:17:05.338282" elapsed="0.065383"/>
+</kw>
+<kw name="Input Telephone" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.404761" level="INFO">Typing text '099-999-9999' into text field '//*[@id='input_comp-lt33fcsi1']'.</msg>
+<arg>//*[@id='input_comp-lt33fcsi1']</arg>
+<arg>${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.403665" elapsed="0.068413"/>
+</kw>
+<arg>${TEL}</arg>
+<status status="PASS" start="2026-02-20T23:17:05.403665" elapsed="0.069425"/>
+</kw>
+<kw name="Input Notes" owner="keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.473090" level="INFO">Typing text 'None' into text field '//*[@id='input_comp-lt33fct3']'.</msg>
+<arg>//*[@id='input_comp-lt33fct3']</arg>
+<arg>${notes}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.473090" elapsed="0.058413"/>
+</kw>
+<arg>${NONE}</arg>
+<status status="PASS" start="2026-02-20T23:17:05.473090" elapsed="0.058413"/>
+</kw>
+<kw name="Input Amount People" owner="keyword">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.531503" elapsed="0.277169"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.809664" level="INFO">Clicking element '//*[@id='collection_comp-lt33fcsl1']'.</msg>
+<arg>//*[@id='collection_comp-lt33fcsl1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.809664" elapsed="0.060537"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='comp-lt33fcsl1-portal-wrapper-id']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.870201" elapsed="0.012990"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-20T23:17:05.884371" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>int(${amount}) - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.884371" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${index} &gt; 5">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${index}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-20T23:17:05.884371" elapsed="0.001006"/>
+</kw>
+<status status="NOT RUN" start="2026-02-20T23:17:05.884371" elapsed="0.001006"/>
+</branch>
+<status status="PASS" start="2026-02-20T23:17:05.884371" elapsed="0.001006"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.885377" level="INFO">Clicking element '//*[@id='menuitem-2']'.</msg>
+<arg>//*[@id='menuitem-${index}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.885377" elapsed="0.044034"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2026-02-20T23:17:05.531503" elapsed="0.397908"/>
+</kw>
+<kw name="Click &quot;Yes&quot; Pet" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.929411" level="INFO">Clicking element '//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]'.</msg>
+<arg>//*[@id="comp-ltubl4ab"]/fieldset/div/label[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.929411" elapsed="0.057897"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:17:05.929411" elapsed="0.057897"/>
+</kw>
+<kw name="Click Submit" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:05.987308" level="INFO">Clicking element '//*[@class='uDW_Qe wixui-button PlZyDq']'.</msg>
+<arg>//*[@class='uDW_Qe wixui-button PlZyDq']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:05.987308" elapsed="0.044426"/>
+</kw>
+<status status="PASS" start="2026-02-20T23:17:05.987308" elapsed="0.044426"/>
+</kw>
+<kw name="Check Firstname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:17:06.033099" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.033099" elapsed="0.001274"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:06.046250" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.034373" elapsed="0.011877"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.047713" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_FNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:17:06.034373" elapsed="0.013340"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:17:06.033099" elapsed="0.014614"/>
+</kw>
+<kw name="Check Lastname is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:17:06.048722" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.048722" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:06.060093" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.049719" elapsed="0.010374"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.060093" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_LNAME}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:17:06.048722" elapsed="0.011371"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:17:06.047713" elapsed="0.012380"/>
+</kw>
+<kw name="Check Telephone is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:17:06.061094" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.061094" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:06.071094" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.062092" elapsed="0.009002"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.071094" elapsed="0.000999"/>
+</kw>
+<arg>${XPATH_TEL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:17:06.061094" elapsed="0.010999"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:17:06.061094" elapsed="0.010999"/>
+</kw>
+<kw name="Check Email is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:17:06.072093" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.072093" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:06.084746" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.073459" elapsed="0.011287"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.084746" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_MAIL}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:17:06.072093" elapsed="0.012653"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:17:06.072093" elapsed="0.012653"/>
+</kw>
+<kw name="Check Number of Adults is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:17:06.086115" level="INFO">${state} = false</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.086115" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:06.101784" level="INFO">${result} = false</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.087132" elapsed="0.014652"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.101784" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ADULTS_NO}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:17:06.086115" elapsed="0.015669"/>
+</kw>
+<arg>'valid'</arg>
+<status status="PASS" start="2026-02-20T23:17:06.086115" elapsed="0.015669"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T23:17:07.103070" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T23:17:06.102792" elapsed="1.000278"/>
+</kw>
+<kw name="Check Accept Terms is" owner="keyword">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-20T23:17:07.103070" level="INFO">${state} = true</msg>
+<var>${state}</var>
+<arg>${state} == 'valid'</arg>
+<arg>false</arg>
+<arg>true</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-02-20T23:17:07.103070" elapsed="0.000000"/>
+</kw>
+<kw name="Check Textbox Invalid State" owner="keyword">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-20T23:17:07.145540" level="INFO">${result} = true</msg>
+<var>${result}</var>
+<arg>${xpath}</arg>
+<arg>aria-invalid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-20T23:17:07.104544" elapsed="0.040996"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${status}</arg>
+<arg>The result of valid state it's not equal with your expected. (Want: ${status} Got: ${result})</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-20T23:17:07.145540" elapsed="0.000000"/>
+</kw>
+<arg>${XPATH_ACCEPT_TERMS}</arg>
+<arg>${state}</arg>
+<status status="PASS" start="2026-02-20T23:17:07.104544" elapsed="0.040996"/>
+</kw>
+<arg>'invalid'</arg>
+<status status="PASS" start="2026-02-20T23:17:07.103070" elapsed="0.042470"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T23:17:07.146541" elapsed="2.179919"/>
+</kw>
+<tag>Bad Case</tag>
+<status status="PASS" start="2026-02-20T23:16:51.395842" elapsed="17.930618"/>
+</test>
+<status status="PASS" start="2026-02-20T23:14:56.285522" elapsed="133.042351"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">Bad Case</stat>
+<stat pass="1" fail="0" skip="0">Happy Case</stat>
+</tag>
+<suite>
+<stat name="Workshop" id="s1" pass="7" fail="0" skip="0">Workshop</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-20T23:14:56.483744" level="ERROR">Error in file 'C:\Year_2\Term_2\QA\Robot_assignment\keyword.resource' on line 4: Resource file 'variable.resource' does not exist.</msg>
+</errors>
+</robot>
